@@ -1,0 +1,17 @@
+{
+  "name": "dojo-leader-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hi"
+  },
+  "author": "Ethan Wagner",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}

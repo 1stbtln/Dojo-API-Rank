@@ -1,0 +1,162 @@
+.css-selector {
+    background: linear-gradient(270deg, #000000, #3c1e00);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 13s ease infinite;
+    -moz-animation: AnimationName 13s ease infinite;
+    animation: AnimationName 13s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+body{
+    background-color: rgb(0, 0, 0) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+h1{
+    color: white;
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 5rem;
+    margin-left: 40px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+#p1{
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 1.1rem;
+    margin-left: 40px;
+    margin-top: 0px;
+}
+div{
+    width: 70%;
+}
+.div2{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100vh;
+    border-left: 1px solid rgb(196, 86, 13);
+    width: 70%;
+    margin-top: 75px;
+}
+#ekwfl{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+button{
+    width: 630px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0);
+    border-style: none;
+    border-radius: 15px;
+    margin-left: 40px;
+    color: white;
+    border: 1px solid rgb(133, 3, 255);
+}
+.div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    height: 80vh;
+    width: 30%;
+    right: 0px;
+    top: 100px;
+    border-radius: 20px;
+    border: 1px solid orangered;
+    margin-right: 20px;
+}
+h2{
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
+.div3Div1{
+    height: fit-content;
+    margin-left: 80px;
+    padding-left: 30px;
+}
+h3{
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 1.1rem !important;
+    
+}
+#p2{
+    color: white;
+}
+ul{
+    color: rgb(255, 195, 67);
+}
+.div3Div2{
+    margin-left: 80px;
+    padding-left: 30px;
+}
+.dropdown{
+    margin-left: 40px;
+}
+.dropdown-toggle{
+    background-color: rgb(0, 0, 0) !important;
+    border: 1px solid rgb(48, 20, 0) !important;
+}
+.dropdown-menu{
+    background-color: #000000 !important;
+}
+.dropdown-item{
+    color: white !important;
+}
+
+@media (max-width: 1280px) {
+    .div3{
+        display: none;
+    }
+    button{
+        width: 100%;
+    }
+    .div2{
+        align-items: center;
+    }
+    #ekwfl{
+        display: flex;
+        align-items: center;
+    }
+    h1{
+        text-align: center;
+    }
+    #p1{
+        text-align: center;
+    }
+}
+@media (max-width: 940px) {
+   
+}
+.x11{
+    box-shadow: .1px .1px 20px .1px rgb(255, 153, 0);
+    border-radius: 5px;
+}
+@media (min-width: 1281px) {
+    .x11{
+        width: fit-content;
+    }
+}
