@@ -24,20 +24,27 @@
         Your browser does not support HTML5 video.
     </video>
 
-    <% players.forEach(function(player) { %>
-      <div class="dropdown x11 css-selector">
+    
+    
+    <% players.forEach(function(player, index) { %>
+      <div class="dropdown x11 css-selector <%= index === 0 ? 'first-place' : '' %>">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <%= player.name %>
+          <%= player.name %> <%= index === 0 ? "(1st Place!)" : "" %>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"><b>Account ID:</b> <i><%= player.accountId %></i></a></li>
-          <li><a class="dropdown-item" href="#"><b>Rounds Played:</b> <i><%= player.roundsPlayed %></i></a></li>
-          <li><a class="dropdown-item" href="#"><b>Total Damage:</b> <i><%= player.overallDamage %></i></a></li>
-          <li><a class="dropdown-item" href="#"><b>Total Kills:</b> <i><%= player.totalKills %></i></a></li>
-          <% // Include additional stats here if needed %>
+          <li><a class="dropdown-item" href="#"><b>Final Score:</b> <i><%= player.finalScore.toFixed(2) %></i></a></li>
+          <li><a class="dropdown-item" href="#"><b>Rounds Played:</b> <i><%= player.roundsPlayed.toLocaleString() %></i></a></li>
+          <li><a class="dropdown-item" href="#"><b>Total Damage:</b> <i><%= player.overallDamage.toLocaleString() %></i></a></li>
+          <li><a class="dropdown-item" href="#"><b>Total Kills:</b> <i><%= player.totalKills.toLocaleString() %></i></a></li>
+          <li><a class="dropdown-item" href="#"><b>DBNOs:</b> <i><%= player.dBNOs ? player.dBNOs.toLocaleString() : 'N/A' %></i></a></li>
+          <li><a class="dropdown-item" href="#"><b>Wins:</b> <i><%= player.wins ? player.wins.toLocaleString() : 'N/A' %></i></a></li>
         </ul>
       </div>
     <% }); %>
+    
+    
+    
+    
     
           
         
@@ -49,23 +56,27 @@
     </div>
 
     <div class="div3">
-        <h2>Top Numbers</h2>
-        <div class="div3Div1">
-            <h3> Impereal</h3>
-            <ul>"damageDealt": 614,126</ul>
-            <ul>"kills": 3571</ul>
-            <ul>"dBNOs": 3594</ul>
-            <ul>"wins": 152</ul>
-        </div>
-        <div class="div3Div2">
-            <h3> BajaMike</h3>
-            <ul>"damageDealt": 414,126</ul>
-            <ul>"kills": 1463</ul>
-            <ul>"dBNOs": 2381</ul>
-            <ul>"wins": 345</ul>
-        </div>
-
-    </div>
+      <h2>Top Numbers</h2>
+      <% if (players.length > 0) { %>
+      <div class="div3Div1">
+          <h3><%= players[0].name %></h3>
+          <ul>Damage Dealt: <%= players[0].overallDamage.toLocaleString() %></ul>
+          <ul>Kills: <%= players[0].totalKills %></ul>
+          <ul>DBNOs: <%= players[0].dBNOs %></ul> <!-- Assuming dBNOs is part of the stats -->
+          <ul>Wins: <%= players[0].wins %></ul> <!-- Assuming wins is part of the stats -->
+      </div>
+      <% } %>
+      <% if (players.length > 1) { %>
+      <div class="div3Div2">
+          <h3><%= players[1].name %></h3>
+          <ul>Damage Dealt: <%= players[1].overallDamage.toLocaleString() %></ul>
+          <ul>Kills: <%= players[1].totalKills %></ul>
+          <ul>DBNOs: <%= players[1].dBNOs %></ul> <!-- Assuming dBNOs is part of the stats -->
+          <ul>Wins: <%= players[1].wins %></ul> <!-- Assuming wins is part of the stats -->
+      </div>
+      <% } %>
+  </div>
+  
     
     
 
