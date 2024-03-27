@@ -1,4 +1,3 @@
-
 #video-background {
     position: fixed;
     right: 0;
@@ -10,6 +9,11 @@
     z-index: -100; /* Ensure video stays in the background */
     background-size: cover;
 }
+.first-place {
+    box-shadow: .1px .1px 20px .1px rgb(255, 153, 0) !important;
+
+}
+  
 body{
     background-color: rgb(0, 0, 0) !important;
     display: flex;
@@ -102,11 +106,10 @@ ul{
 }
 .dropdown{
     margin-left: 40px;
-    background-color: red !important;
 }
 .dropdown-toggle{
-    background-color: rgb(0, 0, 0) !important;
-    border: 1px solid rgb(48, 20, 0) !important;
+    background-color: #000000af !important;
+    border: 1px solid #000000af !important;
 }
 /* Targets dropdown menu items */
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
@@ -117,7 +120,7 @@ ul{
 .dropdown-menu{
     background-color: #000000 !important;
     height: fit-content !important;
-    border: solid 1px rgba(255, 166, 0, 0.301) !important;
+    border: solid 1px rgba(255, 166, 0, 0) !important;
 }
 .dropdown-item{
     color: white !important;
@@ -145,10 +148,9 @@ ul{
     }
 }
 @media (max-width: 940px) {
-   
+
 }
 .x11{
-    box-shadow: .1px .1px 20px .1px rgb(255, 153, 0);
     border-radius: 5px;
 }
 @media (min-width: 1281px) {
@@ -157,5 +159,5 @@ ul{
     }
 }
 .x11{
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 }
